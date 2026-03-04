@@ -40,7 +40,7 @@ function NavBar () {
                     <a
                         key={label}
                         href={href}
-                        className="text-[0.7rem] tracking-widest uppercase text-(--muted) relative group pb-0.5 hover:text-(--text) transition-colors duration-200 "
+                        className="text-[0.7rem] tracking-[0.1rem] font-dm-mono uppercase text-(--muted) relative group pb-0.5 hover:text-(--text) transition-colors duration-200 "
                     >
                         {label}
                         <span className="absolute -bottom-1 left-0 right-0 h-px bg-(--accent) scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
