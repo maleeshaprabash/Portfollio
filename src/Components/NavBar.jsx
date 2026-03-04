@@ -20,7 +20,7 @@ function NavBar () {
     
     return(
         <nav id="nav" 
-            className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-6 px-16 backdrop-blur-md border-b border-b-transparent border-(--border) transition-colors duration-200 ${scrolled
+            className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-6 px-15 backdrop-blur-md border-b border-b-transparent border-(--border) transition-colors duration-200 ${scrolled
                 ? 'bg-[rgba(8,11,16,0.85)] backdrop-blur-md border-(--border)' 
                 : 'bg-transparent'
             }`}>
