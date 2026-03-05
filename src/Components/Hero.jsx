@@ -1,6 +1,6 @@
 function Hero () {
     return(
-        <section className="min-h-screen flex flex-col justify-center relative px-16 pt-35 pb-20 overflow-hidden">
+        <section className="min-h-screen flex flex-col lg:flex-row justify-center relative px-16 pt-35 pb-20 overflow-hidden">
             <div 
                 className="animate-[gridshift_20s_linear_infinite]"
                 style={{
@@ -22,7 +22,7 @@ function Hero () {
                 }}>
             </div>
 
-            <div className="relative z-10">
+            <div className="relative z-10 flex-1">
                 <div className="flex items-center text-(--accent) gap-3 text-[0.65rem] tracking-[0.2em] uppercase mb-7 opacity-0 animate-[fadeUp_0.8s_0.2s_forwards]">
                     <span className="inline-block h-px w-8 bg-(--accent)"></span>
                     Full Stack MERN Developer
@@ -52,7 +52,76 @@ function Hero () {
                     </a>
                 </div>
             </div>
+            
+            <div className="relative z-10 flex-1 flex justify-center items-center animate-[fadein_1s_1s_forwards]">
+                <div className="w-full max-w-120 bg-(--surface) border border-(--border) rounded-md overflow-hidden"
+                    style={{ boxShadow: '0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,229,255,0.05)' }}
+                >
+                    <div className="px-4 py-3 bg-(--border) flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"/>
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]"/>
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]"/>
+                        <span className="mx-auto text-[0.6rem] tracking-widest uppercase text-(--muted)">
+                            developer.json
+                        </span>
+                    </div>
 
+                    <div className="p-6 text-[0.75rem] leading-loose font-dm-mono">
+                        <div><span className="text-[#5a6780]">{'{'}</span></div>
+                        <div>&nbsp;&nbsp;
+                            <span className="text-[#7b61ff]">"name"</span>
+                            <span className="text-[#5a6780]">:</span> 
+                            <span className="text-[#ffd97d]">"Maleesha Prabash"</span>
+                            <span className="text-[#5a6780]">,</span>
+                        </div>
+
+                        <div>&nbsp;&nbsp;
+                            <span className="text-[#7b61ff]">"role"</span>
+                            <span className="text-[#5a6780]">:</span> 
+                            <span className="text-[#ffd97d]">"MERN Developer"</span>
+                            <span className="text-[#5a6780]">,</span>
+                        </div>
+
+                        <div>&nbsp;&nbsp;
+                            <span className="text-[#7b61ff]">"experience"</span>
+                            <span className="text-[#5a6780]">:</span> 
+                            <span className="text-[#00e5ff]">2</span>
+                            <span className="text-[#5a6780]">,</span>
+                        </div>
+
+                        <div>&nbsp;&nbsp;
+                            <span className="text-[#7b61ff]">"stack"</span>
+                            <span className="text-[#5a6780]">:</span> 
+                            <span className="text-[#5a6780]">[</span>
+                        </div>
+                        
+                        {['MongoDB', 'Express.js', 'React', 'Node.js'].map((item, i) => (
+                            <div key={item}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-[#ffd97d]">"{item}"</span>{i < 3 && <span className="text-[#5a6780]">,</span>}</div>
+                        ))}
+                        <div>&nbsp;&nbsp;
+                            <span className="text-[#5a6780]">],</span>
+                        </div>
+
+                        <div>&nbsp;&nbsp;
+                            <span className="text-[#7b61ff]">"available"</span>
+                            <span className="text-[#5a6780]">:</span> 
+                            <span className="text-[#00ffa3]">true</span>
+                        </div>
+
+                        <div>
+                            <span className="text-[#5a6780]">{'}'}</span>
+                            <span className="inline-block w-2 h-3.5 bg-[#00e5ff] ml-0.5 align-middle animate-[blink_1s_step-end_infinite]" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-[fadeIn_1s_1.5s_forwards] z-10">
+                <span className="text-[0.55rem] tracking-[0.2em] uppercase text-(--muted)">Scroll</span>
+                <div className="w-px h-10 bg-(--border) relative overflow-hidden">
+                    <span className="absolute -top-full left-0 w-full h-full bg-(--accent) animate-[scrollDown_1.5s_ease-in-out_infinite]" />
+                </div>
+            </div>
         </section>
     )
 }
